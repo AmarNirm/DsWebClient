@@ -1,16 +1,33 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-</div>
-<h2>Available Algorithms: </h2>
-<div class="dropdown">
-  <button ng-click="myFunction()" class="dropbtn">Dropdown</button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
+<div>
+  <div style="text-align:center">
+    <h1>
+      {{ title }}
+    </h1>
   </div>
-</div>
 
+  <!-- Data -->
+  <h2> Choose Data: </h2>
+  <div class="dropdown">
+    <button (click)="OnDropdownClicked('DataDropdownList')" class="dropbtn"> {{ selectedData }} </button>
+      <div id="DataDropdownList" class="dropdown-content">
+        <!-- <input type="text" placeholder="Search..." class="AlgorithmDropdownInput" id="AlgorithmDropdownInput" (keyup)="OnFilterPressed()"> -->
+        <button class ="algorithm-button" (click)="OnListItemSelected('DataDropdownList', Data1Name)"> {{ Data1Name }} </button>
+        <button class ="algorithm-button" (click)="OnListItemSelected('DataDropdownList', Data2Name)"> {{ Data2Name }} </button>
+      </div>
+    </div>
+
+  <!-- Algorithms -->
+  <h2> Choose Algorithm: </h2>
+  <div class="dropdown">
+    <button (click)="OnDropdownClicked('AlgorithmDropdownList')" class="dropbtn"> {{ selectedAlgorithm }} </button>
+      <div id="AlgorithmDropdownList" class="dropdown-content">
+        <!-- <input type="text" placeholder="Search..." class="AlgorithmDropdownInput" id="AlgorithmDropdownInput" (keyup)="OnFilterPressed()"> -->
+        <button class ="algorithm-button" (click)="OnListItemSelected('AlgorithmDropdownList', algo1Name)"> {{ algo1Name }} </button>
+        <button class ="algorithm-button" (click)="OnListItemSelected('AlgorithmDropdownList', algo2Name)"> {{ algo2Name }} </button>
+      </div>
+    </div>
+
+  <h6> </h6>
+  <div class="play-button" (click)="OnPlayClicked()"> </div>
+
+</div>

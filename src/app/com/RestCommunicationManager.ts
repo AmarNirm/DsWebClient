@@ -17,6 +17,7 @@ export class RestCommunicationManager implements ICommunicationManager {
         return nir;    
     }
     
+    
     getProjects(): IProject[] {
         // todo - dummy implementation - use REST API instead
         let nir = new Array<IProject>();
@@ -27,4 +28,6 @@ export class RestCommunicationManager implements ICommunicationManager {
         return nir;        
     }
 }
+
+
 
