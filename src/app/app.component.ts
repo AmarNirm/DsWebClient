@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { RestCommunicationManager } from "./com/RestCommunicationManager";
+import { ICommunicationManager } from "./com/ICommunicationManager";
 
 @Component({
   selector: 'app-root',
@@ -15,6 +17,19 @@ export class AppComponent {
   algo1Name = "Algorithm 1"; // todo: get dynamically from web server
   algo2Name = "Algorithm 2"; // todo: get dynamically from web server
 
+  private _comManager: ICommunicationManager;
+
+  constructor()
+  {
+      this._comManager = new RestCommunicationManager();
+      this.InitilizeUi();
+  }
+
+  private InitilizeUi()
+  {
+      let projects = this._comManager.getProjects();
+      console.log(projects);
+  }
 
   // When the user clicks on the button, toggle between hiding and showing the dropdown content
   OnDropdownClicked(dropdownList) {
@@ -34,19 +49,4 @@ export class AppComponent {
   {
     console.log("Play Clicked");
   }
-
-  // OnFilterPressed() {
-  //     var input, filter, ul, li, a, i;
-  //     input = document.getElementById("AlgorithmDropdownInput");
-  //     filter = input.value.toUpperCase();
-  //     var div = document.getElementById("AlgorithmDropdownList");
-  //     a = div.getElementsByTagName("button");
-  //     for (i = 0; i < a.length; i++) {
-  //         if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
-  //             a[i].style.display = "";
-  //         } else {
-  //             a[i].style.display = "none";
-  //         }
-  //     }
-  // }
 }

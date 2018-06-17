@@ -1,0 +1,37 @@
+.panel-body {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+}
+
+    .panel-body img {
+        height: 100%;
+        width: auto;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+
+.asteriskField {
+    color: red;
+    font-size: larger;
+}
+
+label.error {
+    color: red;
+    display: block;
+}
+
+input.error {
+    border-color: Red;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.des {
+    font-size: 13px;
+    padding: 10px 8px 10px 240px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
