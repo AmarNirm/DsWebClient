@@ -3,10 +3,10 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  // title = 'Data Science Explorer';
+  title: string = 'Data Science Explorer';
   // selectedData = 'Select Data';
   // Data1Name = "Data 1"; // todo: get dynamically from web server
   // Data2Name = "Data 2"; // todo: get dynamically from web server

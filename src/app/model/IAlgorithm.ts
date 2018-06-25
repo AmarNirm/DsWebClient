@@ -3,5 +3,8 @@ export interface IAlgorithm {
     AlgorithmMetaDataParams: Array<[string, Type]>; // <name,type>
     OutputType: Output;
     //OutputParams: Array<IOutputParams>
+
+    // to which project
+    // description
 }
 

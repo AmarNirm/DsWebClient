@@ -1,10 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+
 
 import { AppComponent } from './app.component';
 import { ProjectsComponent } from './home/projects.component';
-import { routing } from './app.routing';
 import { ProjectComponent } from './project/project.component';
 
 
@@ -17,9 +18,13 @@ import { ProjectComponent } from './project/project.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    routing
+    RouterModule.forRoot([
+      { path: 'projects', component: ProjectsComponent },
+      { path: 'project/:projectName', component: ProjectComponent },
+      { path: '', redirectTo: 'projects', pathMatch: 'full'},
+      { path: '**', redirectTo: 'projects', pathMatch: 'full'}
+    ]),
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

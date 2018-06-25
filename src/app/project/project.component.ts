@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { switchMap } from 'rxjs/operators';
+import { Component, OnInit, HostBinding } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-project',
@@ -16,16 +19,19 @@ export class ProjectComponent implements OnInit {
   algo1Name = "Algorithm 1"; // todo: get dynamically from web server
   algo2Name = "Algorithm 2"; // todo: get dynamically from web server
 
-  constructor()
-  {
-  }
+  constructor(
+    private activeRoute: ActivatedRoute
+  ) {}
 
-  ngOnInit(): void {
+  ngOnInit() 
+  {
+    this.title = this.activeRoute.snapshot.params.projectName;
   }
+  
+  
 
   // When the user clicks on the button, toggle between hiding and showing the dropdown content
   OnDropdownClicked(dropdownList) {
-    console.log(dropdownList);
     document.getElementById(dropdownList).classList.toggle("show");
   }
 

@@ -4,12 +4,12 @@
     overflow: hidden;
 }
 
-    .panel-body img {
-        height: 100%;
-        width: auto;
-        background-repeat: no-repeat;
-        background-size: 100%;
-    }
+.panel-body img {
+    height: 100%;
+    width: auto;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
 
 
 .asteriskField {
@@ -34,4 +34,8 @@ input.error {
     background: #fff;
     border: 1px solid #ccc;
     border-radius: 6px;
+}
+
+#projects_container {
+    margin-top: 20%;
 }
