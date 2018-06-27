@@ -1,97 +1,19 @@
 
 <div id="projects_container" class="container">
-    <a routerLink="/project/projectName1" routerLinkActive="active">
-        <div class="col-sm-3">
-            <div class="panel panel-success">
-                <div class="panel-heading text-center">{{mostUsedProjects[0].UserReadebaleName}}</div>
-                <div class="panel-body">
-                    <img src="assets/project1.png" class="img-responsive" alt="Image">
-                </div>
-            </div>
-        </div>
-    </a>
+    <div *ngFor='let project of mostUsedProjects'>
 
-    
-    <a routerLink="/project" routerLinkActive="active">
-        <div class="col-sm-3">
-            <div class="panel panel-success">
-                <div class="panel-heading text-center">{{mostUsedProjects[1].UserReadebaleName}}</div>
-                <div class="panel-body">
-                    <img src="assets/project1.png" class="img-responsive" alt="Image">
+        <a routerLink="/project/{{project.UserReadebaleName}}" routerLinkActive="active">
+            <div class="col-sm-3">
+                <div class="panel panel-success">
+                    <div class="panel-heading text-center">{{project.UserReadebaleName}}</div>
+                    <div class="panel-body">
+                        <img src="assets/project1.png" class="img-responsive" alt="Image">
+                    </div>
                 </div>
             </div>
-        </div>
-    </a>
+        </a>
 
-    
-    <a routerLink="/project" routerLinkActive="active">
-        <div class="col-sm-3">
-            <div class="panel panel-success">
-                <div class="panel-heading text-center">{{mostUsedProjects[2].UserReadebaleName}}</div>
-                <div class="panel-body">
-                    <img src="assets/project1.png" class="img-responsive" alt="Image">
-                </div>
-            </div>
-        </div>
-    </a>
-
-    
-    <a routerLink="/project" routerLinkActive="active">
-        <div class="col-sm-3">
-            <div class="panel panel-success">
-                <div class="panel-heading text-center">{{mostUsedProjects[3].UserReadebaleName}}</div>
-                <div class="panel-body">
-                    <img src="assets/project1.png" class="img-responsive" alt="Image">
-                </div>
-            </div>
-        </div>
-    </a>
-
-    
-    <a routerLink="/project" routerLinkActive="active">
-        <div class="col-sm-3">
-            <div class="panel panel-success">
-                <div class="panel-heading text-center">{{mostUsedProjects[4].UserReadebaleName}}</div>
-                <div class="panel-body">
-                    <img src="assets/project1.png" class="img-responsive" alt="Image">
-                </div>
-            </div>
-        </div>
-    </a>
-
-    
-    <a routerLink="/project" routerLinkActive="active">
-        <div class="col-sm-3">
-            <div class="panel panel-success">
-                <div class="panel-heading text-center">{{mostUsedProjects[5].UserReadebaleName}}</div>
-                <div class="panel-body">
-                    <img src="assets/project1.png" class="img-responsive" alt="Image">
-                </div>
-            </div>
-        </div>
-    </a>
-
-    <a routerLink="/project" routerLinkActive="active">
-        <div class="col-sm-3">
-            <div class="panel panel-success">
-                <div class="panel-heading text-center">{{mostUsedProjects[6].UserReadebaleName}}</div>
-                <div class="panel-body">
-                    <img src="assets/project1.png" class="img-responsive" alt="Image">
-                </div>
-            </div>
-        </div>
-    </a>
-
-    <a routerLink="/project" routerLinkActive="active">
-        <div class="col-sm-3">
-            <div class="panel panel-success">
-                <div class="panel-heading text-center">{{mostUsedProjects[7].UserReadebaleName}}</div>
-                <div class="panel-body">
-                    <img src="assets/project1.png" class="img-responsive" alt="Image">
-                </div>
-            </div>
-        </div>
-    </a>
+    </div>
 </div>
 
 

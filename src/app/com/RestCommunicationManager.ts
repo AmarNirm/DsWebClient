@@ -25,9 +25,10 @@ export class RestCommunicationManager implements ICommunicationManager {
         for (var _i = 0; _i < 8; _i++) {
             let dummyAlgo = new Algorithm();
             dummyAlgo.UserReadebaleName = "Algorithm " + (_i + 1);
-            dummyAlgo.AlgorithmMetaDataParams = [["AlgorithmMetaDataParamsName", Type.Number]];
-            dummyAlgo.OutputType = Output.Text;
-            algos[_i] = dummyAlgo;
+            dummyAlgo.AlgorithmMetaDataParams = new Array();
+            // dummyAlgo.AlgorithmMetaDataParams.push(["AlgorithmMetaDataParamsName", Type.Number]);
+            // dummyAlgo.OutputType = Output.Text;
+            algos[_i] = dummyAlgo; 
         }
         return algos;    
     }

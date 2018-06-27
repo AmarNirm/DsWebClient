@@ -1,7 +1,10 @@
-import { switchMap } from 'rxjs/operators';
-import { Component, OnInit, HostBinding } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+import { ICommunicationManager } from '../com/ICommunicationManager';
+import { RestCommunicationManager } from '../com/RestCommunicationManager';
+import { IAlgorithm } from '../model/IAlgorithm';
+import { DummyAlgorithm } from '../model/DummyAlgorithm';
 
 @Component({
   selector: 'app-project',
@@ -9,41 +12,29 @@ import { Observable } from 'rxjs';
   styleUrls: ['./project.component.css']
 })
 export class ProjectComponent implements OnInit {
-
+ 
   title = 'Data Science Explorer';
-  selectedData = 'Select Data';
-  Data1Name = "Data 1"; // todo: get dynamically from web server
-  Data2Name = "Data 2"; // todo: get dynamically from web server
+  algorithms: IAlgorithm[];
+  selectedAlgorithm: IAlgorithm;
 
-  selectedAlgorithm = 'Select Algorithm';
-  algo1Name = "Algorithm 1"; // todo: get dynamically from web server
-  algo2Name = "Algorithm 2"; // todo: get dynamically from web server
-
+  private _comManager: ICommunicationManager
+ 
   constructor(
-    private activeRoute: ActivatedRoute
-  ) {}
+    private activeRoute: ActivatedRoute,
+  ) 
+  {
+    this._comManager = new RestCommunicationManager();
+    this.selectedAlgorithm = new DummyAlgorithm();
+  }
 
   ngOnInit() 
   {
     this.title = this.activeRoute.snapshot.params.projectName;
+    this.algorithms = this._comManager.getAlgorithms();
+    console.log(this.algorithms);
   }
   
-  
-
-  // When the user clicks on the button, toggle between hiding and showing the dropdown content
-  OnDropdownClicked(dropdownList) {
-    document.getElementById(dropdownList).classList.toggle("show");
-  }
-
-  OnListItemSelected (dropdownList, button) {
-    if( dropdownList== "DataDropdownList")
-      this.selectedData = button;
-    else
-      this.selectedAlgorithm = button;
-    document.getElementById(dropdownList).classList.toggle("show");
-  }
-
-  OnPlayClicked()
+    OnPlayClicked()
   {
     console.log("Play Clicked");
   }

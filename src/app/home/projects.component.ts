@@ -18,7 +18,6 @@ export class ProjectsComponent implements OnInit
 
   constructor() 
   {
-    console.log("ProjectsComponent");
     this._comManager = new RestCommunicationManager();
     this.InitilizeUi();
   }
@@ -31,7 +30,6 @@ export class ProjectsComponent implements OnInit
 
   ngOnInit() 
   {
-    console.log("ProjectsComponent");
   }
 
 }

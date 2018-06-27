@@ -1,34 +1,23 @@
 <div>
   <div style="text-align:center">
     <h1>
-      nir = {{ title }}
+      {{ title }}
     </h1>
   </div>
-
-  <!-- Data -->
-  <h2> Choose Data: </h2>
-  <div class="dropdown">
-    <button (click)="OnDropdownClicked('DataDropdownList')" class="dropbtn"> {{ selectedData }} </button>
-      <div id="DataDropdownList" class="dropdown-content">
-        <!-- <input type="text" placeholder="Search..." class="AlgorithmDropdownInput" id="AlgorithmDropdownInput" (keyup)="OnFilterPressed()"> -->
-        <button class ="algorithm-button" (click)="OnListItemSelected('DataDropdownList', Data1Name)"> {{ Data1Name }} </button>
-        <button class ="algorithm-button" (click)="OnListItemSelected('DataDropdownList', Data2Name)"> {{ Data2Name }} </button>
+ 
+  <div id="algorithms">
+    
+    <select [(ngModel)]="selectedAlgorithm">
+      <option *ngFor="let algorithm of algorithms" [ngValue]="algorithm">{{algorithm.UserReadebaleName}}</option>
+    </select>    
+      
+      <div>
+        <h1>{{selectedAlgorithm.UserReadebaleName}}</h1>
       </div>
-    </div>
+</div> 
 
-  <!-- Algorithms -->
-  <h2> Choose Algorithm: </h2>
-  <div class="dropdown">
-    <button (click)="OnDropdownClicked('AlgorithmDropdownList')" class="dropbtn"> {{ selectedAlgorithm }} </button>
-      <div id="AlgorithmDropdownList" class="dropdown-content">
-        <!-- <input type="text" placeholder="Search..." class="AlgorithmDropdownInput" id="AlgorithmDropdownInput" (keyup)="OnFilterPressed()"> -->
-        <button class ="algorithm-button" (click)="OnListItemSelected('AlgorithmDropdownList', algo1Name)"> {{ algo1Name }} </button>
-        <button class ="algorithm-button" (click)="OnListItemSelected('AlgorithmDropdownList', algo2Name)"> {{ algo2Name }} </button>
-      </div>
-    </div>
 
-  <div class="play-button" (click)="OnPlayClicked()"> </div>
-  <!-- <router-outlet></router-outlet> -->
+  <!-- <div class="play-button" (click)="OnPlayClicked()"> </div> -->
 
 
 
