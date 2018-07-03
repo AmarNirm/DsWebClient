@@ -3,11 +3,14 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgDragDropModule } from 'ng-drag-drop';
 
 
 import { AppComponent } from './app.component';
 import { ProjectsComponent } from './home/projects.component';
 import { ProjectComponent } from './project/project.component';
+import { ProjectGraphComponent } from './project/project-graph/project-graph.component';
+
 
 
 @NgModule({
@@ -15,6 +18,7 @@ import { ProjectComponent } from './project/project.component';
     AppComponent,
     ProjectsComponent,
     ProjectComponent,
+    ProjectGraphComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,6 +31,7 @@ import { ProjectComponent } from './project/project.component';
       { path: '', redirectTo: 'projects', pathMatch: 'full'},
       { path: '**', redirectTo: 'projects', pathMatch: 'full'}
     ]),
+    NgDragDropModule.forRoot(),
   ],
   bootstrap: [AppComponent]
 })

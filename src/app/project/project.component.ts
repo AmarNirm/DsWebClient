@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+
 import { ICommunicationManager } from '../com/ICommunicationManager';
 import { RestCommunicationManager } from '../com/RestCommunicationManager';
 import { IAlgorithm } from '../model/IAlgorithm';
@@ -18,7 +19,7 @@ export class ProjectComponent implements OnInit {
   selectedAlgorithm: IAlgorithm;
 
   private _comManager: ICommunicationManager
- 
+
   constructor(
     private activeRoute: ActivatedRoute,
   ) 
@@ -34,7 +35,14 @@ export class ProjectComponent implements OnInit {
     console.log(this.algorithms);
   }
   
-    OnPlayClicked()
+  onAlgorithmDrop(e: any) {
+    console.log("onItemDrop");
+
+    // Get the dropped data here
+    this.selectedAlgorithm = e.dragData;
+  }
+
+  OnPlayClicked()
   {
     console.log("Play Clicked");
   }

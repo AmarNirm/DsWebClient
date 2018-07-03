@@ -1,23 +1,49 @@
 <div>
-  <div style="text-align:center">
-    <h1>
-      {{ title }}
-    </h1>
-  </div>
- 
-  <div id="algorithms">
-    
+  
+  <div>
+    <div style="text-align:center">
+      <h1>
+        {{ title }}
+      </h1>
+    </div>
+  
+
+  <h6><b>Available Algorithms ({{algorithms.length}})</b></h6>
+  <h6> Run algorithm by dragging it to a pannel</h6>
+
+  <!-- <div id="algorithms">  
     <select [(ngModel)]="selectedAlgorithm">
-      <option *ngFor="let algorithm of algorithms" [ngValue]="algorithm">{{algorithm.UserReadebaleName}}</option>
+      <option draggable *ngFor="let algorithm of algorithms" [ngValue]="algorithm">{{algorithm.UserReadebaleName}}</option>
     </select>    
-      
-      <div>
-        <h1>{{selectedAlgorithm.UserReadebaleName}}</h1>
+  </div> -->
+
+  
+  <div class="row">
+      <div class="col-sm-3">
+          <ul class="list-group">
+              <li draggable *ngFor="let algorithm of algorithms" [dragData]="algorithm" class="list-group-item">{{algorithm.UserReadebaleName}}</li>
+          </ul>
       </div>
-</div> 
+      
+    <div class="col-sm-3">
+    <div class="panel panel-default" droppable (onDrop)="onAlgorithmDrop($event)">
+        <div class="panel-heading">Drop algorithm here</div>
+          <div class="panel-body">
+            <li class="list-group-item">{{selectedAlgorithm.UserReadebaleName}}</li>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+</div>
 
+<!-- <div> 
+    <h1>{{selectedAlgorithm.UserReadebaleName}}</h1>
+</div> -->
 
-  <!-- <div class="play-button" (click)="OnPlayClicked()"> </div> -->
+<!-- <app-project-graph></app-project-graph> -->
+<!-- <div class="play-button" (click)="OnPlayClicked()"> </div> -->
 
 
 
