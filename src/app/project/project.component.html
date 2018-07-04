@@ -24,25 +24,16 @@
               <li draggable *ngFor="let algorithm of algorithms" [dragData]="algorithm" class="list-group-item">{{algorithm.UserReadebaleName}}</li>
           </ul>
       </div>
-      
-    <div class="col-sm-3">
-    <div class="panel panel-default" droppable (onDrop)="onAlgorithmDrop($event)">
-        <div class="panel-heading">Drop algorithm here</div>
-          <div class="panel-body">
-            <li class="list-group-item">{{selectedAlgorithm.UserReadebaleName}}</li>
-        </div>
-      </div>
-    </div>
+
+    <app-project-graph></app-project-graph>
   </div>
-  
-  
+
 </div>
 
 <!-- <div> 
     <h1>{{selectedAlgorithm.UserReadebaleName}}</h1>
 </div> -->
 
-<!-- <app-project-graph></app-project-graph> -->
 <!-- <div class="play-button" (click)="OnPlayClicked()"> </div> -->
 
 

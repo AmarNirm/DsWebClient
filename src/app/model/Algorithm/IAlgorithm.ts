@@ -1,11 +1,11 @@
-import { Output } from "./Output";
-import { Type } from "../shared/type";
+import { AlgorithmOutputType } from "../AlgorithmOutputType";
+import { Type } from "../../shared/type";
 
 export interface IAlgorithm {
     Name: string;
     UserReadebaleName: string;
     AlgorithmMetaDataParams: Array<[string, Type]>; // <name,type>
-    OutputType: Output;
+    OutputType: AlgorithmOutputType;
     //OutputParams: Array<IOutputParams>
 
     // to which project

@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';  
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
@@ -10,6 +11,7 @@ import { AppComponent } from './app.component';
 import { ProjectsComponent } from './home/projects.component';
 import { ProjectComponent } from './project/project.component';
 import { ProjectGraphComponent } from './project/project-graph/project-graph.component';
+import { ConvertToTextPipe } from './project/project-graph/AlgorithmOutputToText.pipe';
 
 
 
@@ -19,8 +21,10 @@ import { ProjectGraphComponent } from './project/project-graph/project-graph.com
     ProjectsComponent,
     ProjectComponent,
     ProjectGraphComponent,
+    ConvertToTextPipe
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     HttpClientModule,
     FormsModule,

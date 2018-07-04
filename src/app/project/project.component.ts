@@ -4,8 +4,8 @@ import { ActivatedRoute } from '@angular/router';
 
 import { ICommunicationManager } from '../com/ICommunicationManager';
 import { RestCommunicationManager } from '../com/RestCommunicationManager';
-import { IAlgorithm } from '../model/IAlgorithm';
-import { DummyAlgorithm } from '../model/DummyAlgorithm';
+import { IAlgorithm } from '../model/Algorithm/IAlgorithm';
+import { DummyAlgorithm } from '../model/Algorithm/DummyAlgorithm';
 
 @Component({
   selector: 'app-project',
@@ -16,7 +16,6 @@ export class ProjectComponent implements OnInit {
  
   title = 'Data Science Explorer';
   algorithms: IAlgorithm[];
-  selectedAlgorithm: IAlgorithm;
 
   private _comManager: ICommunicationManager
 
@@ -25,7 +24,6 @@ export class ProjectComponent implements OnInit {
   ) 
   {
     this._comManager = new RestCommunicationManager();
-    this.selectedAlgorithm = new DummyAlgorithm();
   }
 
   ngOnInit() 
@@ -33,13 +31,6 @@ export class ProjectComponent implements OnInit {
     this.title = this.activeRoute.snapshot.params.projectName;
     this.algorithms = this._comManager.getAlgorithms();
     console.log(this.algorithms);
-  }
-  
-  onAlgorithmDrop(e: any) {
-    console.log("onItemDrop");
-
-    // Get the dropped data here
-    this.selectedAlgorithm = e.dragData;
   }
 
   OnPlayClicked()
