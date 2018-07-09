@@ -59,8 +59,10 @@ export class RestCommunicationManager implements ICommunicationManager {
         // todo - dummy implementation - use REST API instead
         if(algorithm.OutputType == AlgorithmOutputType.Text)
             return new DummyAlgorithmOutput([["Dummy Algorithm Result"]]);
-        else if (algorithm.OutputType == AlgorithmOutputType.Graph || algorithm.OutputType == AlgorithmOutputType.Table)
-            return new DummyAlgorithmOutput([[1,2,3], [1,1,1]]);
+        else if (algorithm.OutputType == AlgorithmOutputType.Table)
+            return new DummyAlgorithmOutput([  ["header1","header2","header3"], [1,2,3], [1,1,1]]);
+        else if (algorithm.OutputType == AlgorithmOutputType.Graph)
+            return new DummyAlgorithmOutput([  ["header1","header2","header3"], [1,2,3], [1,1,1]]);
     }
 }
 

@@ -4,8 +4,30 @@
     <div class="panel panel-default" droppable (onDrop)="onAlgorithmDrop($event)">
       <div class="panel-heading">Drop algorithm here</div>
         <div class="panel-body">
+
+          <!-- Header -->
           <li class="list-group-item">{{selectedAlgorithm.UserReadebaleName}}</li>
+
+          <!-- Text -->
           <li *ngIf='IsAlgorithmOutputText(selectedAlgorithm)' class="list-group-item">{{output | convertToText}}</li>
+
+          <!-- Table -->
+          <div *ngIf='IsAlgorithmOutputTable(selectedAlgorithm)'>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th ng-repeat="label in outputTableHeaders">{{label}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="rows in outputTableData[0]">
+                      <td ng-repeat="label in outputTableData">{{outputTableData[$index][$parent.$index]}}</td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+
+
         </div>
     </div>
   </div>
