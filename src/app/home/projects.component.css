@@ -36,17 +36,13 @@ input.error {
     border-radius: 6px;
 }
 
-#projects_container {
-    /* margin-top: 20%; */
+/* Icon when the collapsible content is shown */
+.btn:after {
+font-family: "Glyphicons Halflings";
+content: "\e114";
+float: right;
 }
-
-  /* Icon when the collapsible content is shown */
-  .btn:after {
-    font-family: "Glyphicons Halflings";
-    content: "\e114";
-    float: right;
-  }
-  /* Icon when the collapsible content is hidden */
-  .btn.collapsed:after {
-    content: "\e080";
-  }
+/* Icon when the collapsible content is hidden */
+.btn.collapsed:after {
+content: "\e080";
+}

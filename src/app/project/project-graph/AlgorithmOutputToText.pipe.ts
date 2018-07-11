@@ -8,10 +8,11 @@ export class ConvertToTextPipe implements PipeTransform {
 
     // by convention - for strings, the place in value[0][0] is the result text
     transform(value: IAlgorithmOutput): string {
-        if(value == null)
-            return "";
-        
-        let str = value.Output[0][0];
+        if (value === null) {
+            return '';
+        }
+
+        const str = value.Output[0][0];
         return str.toString();
     }
 }

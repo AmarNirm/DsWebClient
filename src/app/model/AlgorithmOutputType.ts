@@ -3,6 +3,5 @@ export enum AlgorithmOutputType {
     Table,
     Graph
 }
-export class AlgorithmOutputTypeDummy
-{
+export class AlgorithmOutputTypeDummy {
 }
