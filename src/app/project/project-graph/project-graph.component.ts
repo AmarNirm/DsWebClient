@@ -47,15 +47,13 @@ export class ProjectGraphComponent implements OnInit {
         this.outputTableData[index - 1] = element;
       }
     } else if (this.selectedAlgorithm.OutputType === AlgorithmOutputType.Graph) {
-          // Graph
+      // Graph convention - the first array is titles (headers) and the rest are series (body) - can be plural
+      this.outputTableHeaders = this.output.Output[0];
+      for (let index = 1; index < this.output.Output.length; index++) {
+        const element = this.output.Output[index];
+        this.outputTableData[index - 1] = element;
+      }
     }
-
-    console.log('headers:');
-    console.log(this.outputTableHeaders);
-    console.log('data:');
-    this.outputTableData.forEach(element => {
-      console.log(element);
-    });
   }
 
   IsAlgorithmOutputText (): boolean {
@@ -63,10 +61,6 @@ export class ProjectGraphComponent implements OnInit {
   }
 
   IsAlgorithmOutputTable (): boolean {
-    const nir = this.selectedAlgorithm.OutputType === AlgorithmOutputType.Table &&
-    this.outputTableHeaders !== null &&
-    this.outputTableHeaders.length > 0;
-    console.log('IsAlgorithmOutputTable = ' + nir);
     return this.selectedAlgorithm.OutputType === AlgorithmOutputType.Table &&
     this.outputTableHeaders !== null &&
     this.outputTableHeaders.length > 0;
