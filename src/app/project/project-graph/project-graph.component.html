@@ -16,20 +16,21 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th ng-repeat="label in outputTableHeaders">{{label}}</th>
+                        <th *ngFor="let label of outputTableHeaders">{{label}}</th>
                     </tr>
                 </thead>
                 <tbody>
-                  <tr ng-repeat="rows in outputTableData[0]">
-                      <td ng-repeat="label in outputTableData">{{outputTableData[$index][$parent.$index]}}</td>
+                  <tr *ngFor="let row of outputTableData">
+                      <td *ngFor="let column of row">{{column}}</td>
                   </tr>
               </tbody>
             </table>
           </div>
 
+          <!-- Graph -->
+
 
         </div>
     </div>
   </div>
-
 </div>

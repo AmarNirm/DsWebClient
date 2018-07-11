@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ActivatedRoute } from '@angular/router';
 
 import { IAlgorithm } from '../../model/Algorithm/IAlgorithm';
 import { DummyAlgorithm } from '../../model/Algorithm/DummyAlgorithm';
@@ -18,56 +18,62 @@ export class ProjectGraphComponent implements OnInit {
   private selectedAlgorithm: IAlgorithm;
   private comManager: ICommunicationManager;
   private output: IAlgorithmOutput;
-  
-  private outputTableHeaders : string[];
-  private outputTableData : number[][];
 
-  constructor()
-  {
+  private outputTableHeaders: string[];
+  private outputTableData: number[][];
+
+  constructor()  {
     this.comManager = new RestCommunicationManager();
     this.selectedAlgorithm = new DummyAlgorithm();
-    
+  }
+
+  ngOnInit() {
     this.outputTableHeaders  = new Array<string>();
     this.outputTableData = new Array<Array<number>>();
   }
 
-  ngOnInit() {}
-
-  onAlgorithmDrop(e: any) 
-  {
+  onAlgorithmDrop(e: any) {
     // Get the dropped data here
     this.selectedAlgorithm = e.dragData;
     this.output = this.comManager.activateAlgorithm(this.selectedAlgorithm);
     this.outputTableHeaders = new Array<string>();
     this.outputTableData = new Array<Array<number>>();
-    
+
     // Table convention - the first array is headers and the rest are body
-    if(this.selectedAlgorithm.OutputType == AlgorithmOutputType.Table)
-    {
+    if (this.selectedAlgorithm.OutputType === AlgorithmOutputType.Table) {
       this.outputTableHeaders = this.output.Output[0];
       for (let index = 1; index < this.output.Output.length; index++) {
         const element = this.output.Output[index];
         this.outputTableData[index - 1] = element;
       }
+    } else if (this.selectedAlgorithm.OutputType === AlgorithmOutputType.Graph) {
+          // Graph
     }
 
-    // Graph
-    else if(this.selectedAlgorithm.OutputType == AlgorithmOutputType.Graph)
-    {
-    }
+    console.log('headers:');
+    console.log(this.outputTableHeaders);
+    console.log('data:');
+    this.outputTableData.forEach(element => {
+      console.log(element);
+    });
   }
 
-  IsAlgorithmOutputText () : boolean 
-  {
-    return this.selectedAlgorithm.OutputType == AlgorithmOutputType.Text;
+  IsAlgorithmOutputText (): boolean {
+    return this.selectedAlgorithm.OutputType === AlgorithmOutputType.Text;
   }
-  IsAlgorithmOutputTable () : boolean 
-  {
-    return this.selectedAlgorithm.OutputType == AlgorithmOutputType.Table;
+
+  IsAlgorithmOutputTable (): boolean {
+    const nir = this.selectedAlgorithm.OutputType === AlgorithmOutputType.Table &&
+    this.outputTableHeaders !== null &&
+    this.outputTableHeaders.length > 0;
+    console.log('IsAlgorithmOutputTable = ' + nir);
+    return this.selectedAlgorithm.OutputType === AlgorithmOutputType.Table &&
+    this.outputTableHeaders !== null &&
+    this.outputTableHeaders.length > 0;
   }
-  IsAlgorithmOutputGraph () : boolean 
-  {
-    return this.selectedAlgorithm.OutputType == AlgorithmOutputType.Graph;
+
+  IsAlgorithmOutputGraph (): boolean {
+    return this.selectedAlgorithm.OutputType === AlgorithmOutputType.Graph;
   }
 
 }

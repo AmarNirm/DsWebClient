@@ -1,6 +1,6 @@
-import { IAlgorithm } from "./IAlgorithm";
-import { AlgorithmOutputType } from "../AlgorithmOutputType";
-import { Type } from "../../shared/type";
+import { IAlgorithm } from './IAlgorithm';
+import { AlgorithmOutputType } from '../AlgorithmOutputType';
+import { Type } from '../../shared/type';
 
 export class Algorithm implements IAlgorithm {
     Name: string;
@@ -8,11 +8,10 @@ export class Algorithm implements IAlgorithm {
     AlgorithmMetaDataParams: Array<[string, Type]>;
     OutputType: AlgorithmOutputType;
 
-    constructor()
-    { 
-      this.Name = "DummyAlgorithmName";
-      this.UserReadebaleName = "Dummy Algorithm User Readebale Name";
+    constructor() {
+      this.Name = 'DummyAlgorithmName';
+      this.UserReadebaleName = 'Dummy Algorithm User Readebale Name';
       this.AlgorithmMetaDataParams = new Array();
       this.OutputType = AlgorithmOutputType.Text;
-    } 
+    }
 }
