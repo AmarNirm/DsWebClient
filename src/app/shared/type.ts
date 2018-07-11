@@ -4,6 +4,5 @@ export enum Type {
     String
 }
 
-export class TypeDummy
-{
+export class TypeDummy {
 }
