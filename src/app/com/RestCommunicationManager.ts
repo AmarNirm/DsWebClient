@@ -58,11 +58,18 @@ export class RestCommunicationManager implements ICommunicationManager {
     activateAlgorithm(algorithm: IAlgorithm): IAlgorithmOutput {
         // todo - dummy implementation - use REST API instead
         if (algorithm.OutputType === AlgorithmOutputType.Text) {
-            return new DummyAlgorithmOutput([['Dummy Algorithm Result']]);
+            return new DummyAlgorithmOutput([['Algorithm Result: 42 !']]);
+
         } else if (algorithm.OutputType === AlgorithmOutputType.Table) {
-            return new DummyAlgorithmOutput([  ['header1', 'header2', 'header3'], [1, 2, 3], [7, 8, 9]]);
+            return new DummyAlgorithmOutput([  ['header1', 'header2', 'header3'], [1, 2, 3], [7, 8, 9],
+             [7, 8, 9], [7, 8, 9], [7, 8, 9], [7, 8, 9], [7, 8, 9], [7, 8, 9], [7, 8, 9]]);
+
         } else if (algorithm.OutputType === AlgorithmOutputType.Graph) {
-            return new DummyAlgorithmOutput([  ['header1', 'header2', 'header3'], [1, 2, 3], [7, 8, 9]]);
+            return new DummyAlgorithmOutput([  ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                ['Series A'], [65, 59, 80, 81, 56, 55, 40],
+                ['Series B'], [28, 48, 40, 19, 86, 27, 90],
+                ['Series C'], [18, 48, 77, 9, 100, 27, 40],
+                ]);
         }
     }
 }

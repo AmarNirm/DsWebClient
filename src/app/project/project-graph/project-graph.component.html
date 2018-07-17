@@ -1,6 +1,6 @@
 <div>
   
-  <div class="col-sm-3">
+  <div class="col-sm-9">
     <div class="panel panel-default" droppable (onDrop)="onAlgorithmDrop($event)">
       <div class="panel-heading">Drop algorithm here</div>
         <div class="panel-body">
@@ -27,10 +27,17 @@
             </table>
           </div>
 
-          <!-- Graph -->
-          
+          <div *ngIf='IsAlgorithmOutputGraph(selectedAlgorithm)'>
+            <!-- Graph -->
+            <canvas baseChart height="130" [datasets]="lineChartData" [labels]="lineChartLabels" 
+                    [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend" 
+                    [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+            </canvas>
+          </div>
 
         </div>
     </div>
   </div>
 </div>
+
+

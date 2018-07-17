@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title: string = 'Data Science Explorer';
+  // title: string = 'Data Science Explorer';
   // selectedData = 'Select Data';
   // Data1Name = "Data 1"; // todo: get dynamically from web server
   // Data2Name = "Data 2"; // todo: get dynamically from web server

@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgDragDropModule } from 'ng-drag-drop';
 
+import { ChartsModule as Ng2Charts } from 'ng2-charts';
 
 import { AppComponent } from './app.component';
 import { ProjectsComponent } from './home/projects.component';
@@ -29,6 +30,8 @@ import { ConvertToTextPipe } from './project/project-graph/AlgorithmOutputToText
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    Ng2Charts,
+
     RouterModule.forRoot([
       { path: 'projects', component: ProjectsComponent },
       { path: 'project/:projectName', component: ProjectComponent },
