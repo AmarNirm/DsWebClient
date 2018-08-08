@@ -12750,23 +12750,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\trans\\.nuget\\packages\\": {},
+    "C:\\Users\\Nir\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\trans\\Projects\\DsServer\\DsServer\\DsServer.csproj",
+      "projectUniqueName": "C:\\Projects\\Javascript\\DsWebClient\\Server\\DsServer\\DsServer.csproj",
       "projectName": "DsServer",
-      "projectPath": "C:\\Users\\trans\\Projects\\DsServer\\DsServer\\DsServer.csproj",
-      "packagesPath": "C:\\Users\\trans\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\trans\\Projects\\DsServer\\DsServer\\obj\\",
+      "projectPath": "C:\\Projects\\Javascript\\DsWebClient\\Server\\DsServer\\DsServer.csproj",
+      "packagesPath": "C:\\Users\\Nir\\.nuget\\packages\\",
+      "outputPath": "C:\\Projects\\Javascript\\DsWebClient\\Server\\DsServer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\trans\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Nir\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -9,3 +9,13 @@ C:\Users\trans\Projects\DsServer\DsServer\obj\Debug\netcoreapp2.0\DsServer.Assem
 C:\Users\trans\Projects\DsServer\DsServer\obj\Debug\netcoreapp2.0\DsServer.AssemblyInfo.cs
 C:\Users\trans\Projects\DsServer\DsServer\obj\Debug\netcoreapp2.0\DsServer.dll
 C:\Users\trans\Projects\DsServer\DsServer\obj\Debug\netcoreapp2.0\DsServer.pdb
+C:\Projects\Javascript\DsWebClient\Server\DsServer\bin\Debug\netcoreapp2.0\DsServer.deps.json
+C:\Projects\Javascript\DsWebClient\Server\DsServer\bin\Debug\netcoreapp2.0\DsServer.runtimeconfig.json
+C:\Projects\Javascript\DsWebClient\Server\DsServer\bin\Debug\netcoreapp2.0\DsServer.runtimeconfig.dev.json
+C:\Projects\Javascript\DsWebClient\Server\DsServer\bin\Debug\netcoreapp2.0\DsServer.dll
+C:\Projects\Javascript\DsWebClient\Server\DsServer\bin\Debug\netcoreapp2.0\DsServer.pdb
+C:\Projects\Javascript\DsWebClient\Server\DsServer\obj\Debug\netcoreapp2.0\DsServer.csproj.CoreCompileInputs.cache
+C:\Projects\Javascript\DsWebClient\Server\DsServer\obj\Debug\netcoreapp2.0\DsServer.AssemblyInfoInputs.cache
+C:\Projects\Javascript\DsWebClient\Server\DsServer\obj\Debug\netcoreapp2.0\DsServer.AssemblyInfo.cs
+C:\Projects\Javascript\DsWebClient\Server\DsServer\obj\Debug\netcoreapp2.0\DsServer.dll
+C:\Projects\Javascript\DsWebClient\Server\DsServer\obj\Debug\netcoreapp2.0\DsServer.pdb
