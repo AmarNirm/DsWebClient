@@ -1,0 +1,11 @@
+C:\Users\trans\Projects\DsServer\DsServer\bin\Debug\netcoreapp2.0\DsServer.deps.json
+C:\Users\trans\Projects\DsServer\DsServer\bin\Debug\netcoreapp2.0\DsServer.runtimeconfig.json
+C:\Users\trans\Projects\DsServer\DsServer\bin\Debug\netcoreapp2.0\DsServer.runtimeconfig.dev.json
+C:\Users\trans\Projects\DsServer\DsServer\bin\Debug\netcoreapp2.0\DsServer.dll
+C:\Users\trans\Projects\DsServer\DsServer\bin\Debug\netcoreapp2.0\DsServer.pdb
+C:\Users\trans\Projects\DsServer\DsServer\obj\Debug\netcoreapp2.0\DsServer.csprojAssemblyReference.cache
+C:\Users\trans\Projects\DsServer\DsServer\obj\Debug\netcoreapp2.0\DsServer.csproj.CoreCompileInputs.cache
+C:\Users\trans\Projects\DsServer\DsServer\obj\Debug\netcoreapp2.0\DsServer.AssemblyInfoInputs.cache
+C:\Users\trans\Projects\DsServer\DsServer\obj\Debug\netcoreapp2.0\DsServer.AssemblyInfo.cs
+C:\Users\trans\Projects\DsServer\DsServer\obj\Debug\netcoreapp2.0\DsServer.dll
+C:\Users\trans\Projects\DsServer\DsServer\obj\Debug\netcoreapp2.0\DsServer.pdb
